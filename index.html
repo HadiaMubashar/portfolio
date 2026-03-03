@@ -3,191 +3,130 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hadia Mubashar</title>
-  <meta name="description" content="Automation Expert | AI & Automation | Data Science | Workflows, Integrations, and Agents" />
-  <link rel="icon" href="assets/favicon.svg" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <title>Hadia Mubashar — Automation & AI</title>
+  <meta name="description" content="I build automation systems and AI solutions (LLMs, RAG, ML/DL) that save teams time and scale operations." />
+  <link rel="icon" href="./assets/favicon.svg" />
+  <link rel="stylesheet" href="./assets/styles.css" />
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">HADIA MUBASHAR</div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./">Hadia Mubashar</a>
       <nav class="nav">
-        <a href="#about">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
+        <a class="active" href="./">Home</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./about.html">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container layout">
-    <aside class="sidebar">
-      <div class="card profile">
-        <div class="avatar" aria-hidden="true">HM</div>
-        <h1>Hadia Mubashar</h1>
-        <p class="muted">Automation Expert • AI & Automation • Data Science</p>
+  <main class="container page">
+    <section class="hero">
+      <p class="kicker">Automation • AI Agents • Machine Learning • RAG • Vector Search</p>
 
-        <div class="links">
-          <a id="lnk-email" href="#" rel="nofollow">Email</a>
-          <a id="lnk-github" href="#" target="_blank" rel="noreferrer">GitHub</a>
-          <a id="lnk-linkedin" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
+      <h1>I build automation systems and AI solutions that help teams move faster.</h1>
 
-        <div class="mini">
-          <div><span class="label">Location</span><span>Remote</span></div>
-          <div><span class="label">Phone</span><span>+92 3094177014</span></div>
-          <div><span class="label">Primary</span><span>Automation + AI Agents</span></div>
-        </div>
+      <p class="lead">
+        I work at the intersection of <strong>workflow automation</strong> and <strong>applied AI</strong>:
+        integrating tools (n8n/Make/APIs) and building AI components (LLMs, RAG, vector databases, ML/DL)
+        to reduce manual work and improve decision-making.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn" href="./projects.html">See my work</a>
+        <a class="btn ghost" href="./blog.html">Read my blog</a>
       </div>
 
-      <div class="card">
-        <h2>Education</h2>
-        <p class="tight"><strong>BS in Information Technology</strong><br/>
-          Government College University Faisalabad (2019–2023)<br/>
-          GPA: 3.24
-        </p>
+      <div class="mini-links">
+        <a id="lnk-email" href="#">Email</a>
+        <a id="lnk-github" href="#" target="_blank" rel="noreferrer">GitHub</a>
+        <a id="lnk-linkedin" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
-    </aside>
-
-    <section class="content">
-      <section id="about" class="card">
-        <h2>About</h2>
-        <p>
-          I design and implement end-to-end automation solutions using n8n, Make.com, custom APIs,
-          and hybrid code/no-code approaches. I build scalable workflows, integrate third-party systems,
-          and develop AI-driven automation modules for measurable operational improvement.
-        </p>
-      </section>
-
-      <section id="projects" class="card">
-        <div class="row">
-          <h2>Projects</h2>
-          <div class="controls">
-            <input id="projectSearch" type="search" placeholder="Search projects..." />
-          </div>
-        </div>
-
-        <!-- Highlighted projects from your PDF -->
-        <div class="grid">
-          <article class="proj">
-            <h3>Recruitment Automation System <span class="tag">Make.com</span></h3>
-            <ul>
-              <li>Automated resume parsing, matching, outreach contact finding, and approvals via Sheets toggles.</li>
-              <li>Integrated scraping + contact enrichment + Gmail API sending with human review.</li>
-              <li>~80% reduction in manual work; ~90% contact relevancy (reported).</li>
-            </ul>
-          </article>
-
-          <article class="proj">
-            <h3>Knowledge Retrieval Engine <span class="tag">LangChain • FAISS</span></h3>
-            <ul>
-              <li>Semantic retrieval over Wikipedia content with embeddings and vector search.</li>
-              <li>Summarization + question answering with context-aware responses.</li>
-            </ul>
-          </article>
-
-          <article class="proj">
-            <h3>AI Social Media Automation Agent <span class="tag">n8n • Agents</span></h3>
-            <ul>
-              <li>Ideation → captions → image prompts → scheduling → auto-publishing across platforms.</li>
-              <li>Synced engagement to CRM and triggered automated follow-ups.</li>
-            </ul>
-          </article>
-        </div>
-
-        <hr class="sep"/>
-
-        <h3 class="subhead">GitHub Repositories</h3>
-        <p class="muted tight">
-          This list loads automatically from your GitHub profile. Set your username in <code>assets/config.js</code>.
-        </p>
-
-        <div id="repoStatus" class="muted tight"></div>
-        <div id="repoList" class="repo-list"></div>
-      </section>
-
-      <section id="experience" class="card">
-        <h2>Experience</h2>
-
-        <div class="timeline">
-          <div class="item">
-            <div class="when">Sep 2025 – Present</div>
-            <div class="what">
-              <h3>Automation Expert — TechForce247 (Remote)</h3>
-              <ul>
-                <li>Built end-to-end automations using n8n, Make.com, custom APIs, and low/no-code tools.</li>
-                <li>Architected scalable workflows and maintained API integrations across systems.</li>
-                <li>Developed AI-assisted automation modules (prompting + hybrid approaches).</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="when">Feb 2025 – Sep 2025</div>
-            <div class="what">
-              <h3>Lead — AI & Automation — Techionik (Onsite)</h3>
-              <ul>
-                <li>Delivered automation pipelines (scraping, parsing, CRM sync, messaging, publishing).</li>
-                <li>Created reusable templates and cut manual effort by 80%+ in client workflows.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="when">Nov 2024 – Feb 2025</div>
-            <div class="what">
-              <h3>Data Scientist — Techionik</h3>
-              <ul>
-                <li>Built ML models and RAG chatbots with vector databases for retrieval.</li>
-                <li>Worked on AI business automation and agent workflows.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="when">Nov 2023 – Apr 2024</div>
-            <div class="what">
-              <h3>Data Analyst — Dev Valley Software House</h3>
-              <ul>
-                <li>Insights from large datasets and predictive modeling for decision support.</li>
-                <li>Cross-functional collaboration on requirements and project scopes.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="card">
-        <h2>Skills</h2>
-        <div class="chips">
-          <span class="chip">Python</span><span class="chip">Java</span>
-          <span class="chip">n8n</span><span class="chip">Make.com</span><span class="chip">Zapier</span>
-          <span class="chip">FastAPI</span><span class="chip">Docker</span>
-          <span class="chip">LangChain</span><span class="chip">Hugging Face</span><span class="chip">FAISS</span>
-          <span class="chip">SQL</span><span class="chip">Firebase</span><span class="chip">Supabase</span>
-          <span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Scikit-learn</span>
-          <span class="chip">TensorFlow</span><span class="chip">OpenAI</span>
-        </div>
-      </section>
-
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p class="tight">
-          Email: <a id="emailText" href="#">hadiaj2002@gmail.com</a><br/>
-          Phone: +92 3094177014
-        </p>
-      </section>
-
-      <footer class="footer muted">
-        © <span id="year"></span> Hadia Mubashar • Built with GitHub Pages
-      </footer>
     </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2>What I do</h2>
+        <ul class="list">
+          <li><strong>Automation systems</strong> — n8n, Make.com, Zapier, webhooks, approvals, monitoring</li>
+          <li><strong>AI agents</strong> — tool-using agents, workflow copilots, action-triggering assistants</li>
+          <li><strong>RAG & vector search</strong> — embeddings, chunking, FAISS/vector DBs, retrieval + quality checks</li>
+          <li><strong>ML/DL</strong> — scikit-learn, TensorFlow, training + evaluation pipelines</li>
+          <li><strong>LLM apps</strong> — prompting, function calling, guardrails, reliability</li>
+          <li><strong>Data pipelines</strong> — scraping, parsing, enrichment, QA, storage</li>
+        </ul>
+
+        <p class="muted" style="margin-top:10px">
+          <strong>AI stack:</strong> LLMs, prompt engineering, function calling, LangChain, embeddings, FAISS/vector DBs, RAG pipelines.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>What I’m building lately</h2>
+        <p class="muted">
+          Lately I’ve been building systems that combine <strong>automation + LLMs</strong>:
+          lead/recruitment workflows, internal knowledge assistants (RAG),
+          and agent pipelines that take actions across tools safely (human-in-the-loop).
+        </p>
+        <p class="muted">
+          I care about reliability: logging, retries, fallbacks, and clear evaluation—so solutions work in production, not just demos.
+        </p>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Latest posts</h2>
+        <a class="muted" href="./blog.html">All posts →</a>
+      </div>
+      <div class="posts" id="latestPosts"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Featured case studies</h2>
+        <a class="muted" href="./projects.html">All projects →</a>
+      </div>
+
+      <div class="posts">
+        <a class="post" href="./projects.html#recruitment">
+          <h3>Recruitment Automation System</h3>
+          <p>Resume parsing → matching → outreach → approvals (human-in-the-loop).</p>
+          <span class="meta">Make.com • Gmail API • Sheets</span>
+        </a>
+
+        <a class="post" href="./projects.html#rag">
+          <h3>Knowledge Retrieval Engine (RAG)</h3>
+          <p>Embeddings + vector search with grounded answers and quality checks.</p>
+          <span class="meta">LLMs • FAISS/Vector DB • LangChain</span>
+        </a>
+
+        <a class="post" href="./projects.html#agents">
+          <h3>AI Agents for Social Automation</h3>
+          <p>Content pipeline + scheduling + publishing + CRM sync.</p>
+          <span class="meta">n8n • Agents • Automations</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="section card">
+      <h2>Contact</h2>
+      <p class="muted">Want to collaborate or hire me? Send a message.</p>
+      <p>
+        <strong>Email:</strong> <a id="emailText" href="#">hadiaj2002@gmail.com</a><br/>
+        <strong>Phone:</strong> +92 3094177014
+      </p>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Hadia Mubashar
+    </footer>
   </main>
 
-  <script src="assets/config.js"></script>
-  <script src="assets/app.js"></script>
+  <script src="./assets/config.js"></script>
+  <script src="./assets/app.js"></script>
 </body>
 </html>
