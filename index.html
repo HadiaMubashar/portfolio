@@ -4,12 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Hadia Mubashar — AI & Automation Developer</title>
-  <meta name="description" content="AI & Automation Developer — LLMs, RAG, Vector Search, ML/DL, Integrations and Workflow Automation." />
+  <meta name="description" content="AI & Automation Developer | Machine Learning | RAG | Vector Databases | Geospatial Data | Forecasting" />
   <link rel="icon" href="./assets/favicon.svg" />
   <link rel="stylesheet" href="./assets/styles.css" />
 </head>
 
 <body>
+
+  <!-- Top Navigation -->
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">HADIA MUBASHAR</div>
@@ -23,12 +25,19 @@
   </header>
 
   <main id="home" class="container">
+
+    <!-- Hero Section -->
     <section class="hero">
-      <!-- Left column -->
+
+      <!-- Left Column -->
       <aside class="left">
+
         <div class="photo-wrap">
-          <!-- ✅ Add your image in assets/profile.jpg -->
-          <img class="photo" src="./assets/profile.jpg" alt="Hadia Mubashar" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='grid';" />
+          <!-- Upload your image as assets/profile.jpg -->
+          <img class="photo"
+               src="./assets/profile.jpg"
+               alt="Hadia Mubashar"
+               onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='grid';" />
           <div id="photoFallback" class="photo-fallback">HM</div>
         </div>
 
@@ -38,40 +47,40 @@
         <div class="contact-mini">
           <div><span>Email</span> <a id="emailText" href="#">hadiaj2002@gmail.com</a></div>
           <div><span>Phone</span> <span class="muted">+92 3094177014</span></div>
-          <div><span>GitHub</span> <a id="lnk-github" href="#" target="_blank" rel="noreferrer">HadiaMubashar</a></div>
-          <div><span>LinkedIn</span> <a id="lnk-linkedin" href="#" target="_blank" rel="noreferrer">Profile</a></div>
+          <div><span>GitHub</span> <a id="lnk-github" href="#" target="_blank">HadiaMubashar</a></div>
+          <div><span>LinkedIn</span> <a id="lnk-linkedin" href="#" target="_blank">Profile</a></div>
         </div>
+
       </aside>
 
-      <!-- Right column -->
+      <!-- Right Column -->
       <section class="right">
+
         <p class="lead">
-          I am an <strong>AI & Automation Developer</strong> focused on building production-grade systems that reduce manual work,
-          improve decision-making, and connect tools through robust integrations.
+          I am an <strong>AI & Automation Developer</strong> building intelligent systems that combine
+          workflow automation with applied artificial intelligence.
         </p>
 
         <p class="lead">
-          My core interests include <strong>LLMs</strong>, <strong>RAG</strong>, <strong>vector databases</strong>, <strong>machine learning</strong>,
-          <strong>deep learning</strong>, and <strong>AI agents</strong> — combined with workflow automation using <strong>n8n</strong>, <strong>Make.com</strong>,
-          and custom APIs.
+          My work focuses on <strong>LLMs</strong>, <strong>RAG pipelines</strong>, 
+          <strong>vector databases</strong>, <strong>machine learning</strong>, and 
+          <strong>deep learning</strong> integrated into real-world automation systems.
         </p>
 
         <p class="lead">
-          I’ve worked with technologies like <strong>LangChain</strong>, <strong>FAISS / Vector DBs</strong>, embeddings, retrieval pipelines,
-          and evaluation techniques to improve answer quality and reduce hallucinations.
-          I also build automation pipelines end-to-end: data ingestion → processing → AI reasoning → action execution.
-        </p>
-
-        <p class="lead">
-          I have led and contributed to teams delivering automation and AI solutions for real business workflows — with reliability practices like
-          logging, retries, approvals (human-in-the-loop), and maintainable architecture.
+          I design full data pipelines — from ingestion and preprocessing to AI reasoning 
+          and action execution — ensuring reliability with logging, retries, and 
+          human-in-the-loop validations.
         </p>
 
         <p class="current">
-          I am currently working as <strong>Automation Expert</strong> at <strong>TechForce247</strong> (Remote).
+          Currently working as <strong>Automation Expert</strong> at 
+          <strong>TechForce247 (Remote)</strong>.
         </p>
 
+        <!-- Education + Technologies -->
         <section class="two-col">
+
           <div class="block">
             <h2>Education</h2>
             <div class="edu">
@@ -100,92 +109,131 @@
               <span class="chip">Docker</span>
             </div>
           </div>
+
         </section>
+
       </section>
     </section>
 
-    <!-- Projects (instead of Papers) -->
+    <!-- Projects Section -->
     <section id="projects" class="section">
       <h2 class="section-title">Projects</h2>
 
       <div class="project">
-        <h3>Recruitment Automation System</h3>
-        <div class="meta">Make.com • Gmail API • Google Sheets • Scraping/Enrichment</div>
+        <h3>Building Orientation Calculation Based on Address</h3>
+        <div class="meta">Geospatial Data Engineering • OpenStreetMap • Mapping Automation</div>
         <p>
-          Automated resume parsing, candidate matching, contact finding, and outreach with approvals via Sheets toggles.
-          Designed human review steps for quality and control.
+          Developed a geospatial pipeline to calculate building orientation using 
+          OpenStreetMap data and geocoded addresses.
         </p>
+        <ul class="plain-list">
+          <li>Handled missing entrance data and ambiguous geocoding cases.</li>
+          <li>Implemented filtering and fallback heuristics for complex buildings.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Prime Street Classification System</h3>
+        <div class="meta">Real Estate Modeling • NLP • OpenAI Transformers</div>
+        <p>
+          Built a scalable system to identify premium streets with higher €/m² values.
+        </p>
+        <ul class="plain-list">
+          <li>Normalized street names using OpenAI transformers.</li>
+          <li>Adjusted historical prices using a custom Reflector object.</li>
+          <li>Generated structured reports for investment insights.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Analysis & Forecasting of Trending Areas</h3>
+        <div class="meta">Time Series Forecasting • ARIMA • LSTM</div>
+        <ul class="plain-list">
+          <li>Cleaned sparse weekly data with time-aware interpolation.</li>
+          <li>Built ARIMA & LSTM models for multi-horizon forecasts.</li>
+          <li>Ranked neighborhoods by projected growth potential.</li>
+        </ul>
       </div>
 
       <div class="project">
         <h3>Knowledge Retrieval Engine (RAG)</h3>
-        <div class="meta">LLMs • LangChain • Embeddings • FAISS / Vector Search</div>
+        <div class="meta">LLMs • Embeddings • Vector Search</div>
         <p>
-          Built a semantic retrieval system with vector indexing and grounded responses using retrieved context.
-          Focused on retrieval quality, chunking, and response evaluation.
+          Built a semantic retrieval system with chunking, metadata filters,
+          and grounded LLM responses.
         </p>
       </div>
 
       <div class="project">
-        <h3>AI Social Media Automation Agent</h3>
-        <div class="meta">n8n • Agents • Scheduling • CRM Sync</div>
+        <h3>Recruitment Automation System</h3>
+        <div class="meta">Make.com • Workflow Automation</div>
         <p>
-          End-to-end automation for ideation → captions → image prompts → scheduling → publishing across platforms,
-          plus CRM sync and follow-up triggers based on engagement.
+          Automated resume parsing, matching, outreach, and approvals with 
+          human-in-the-loop design.
         </p>
-      </div>
-
-      <div class="project">
-        <h3>Machine Learning / Deep Learning Work</h3>
-        <div class="meta">Python • scikit-learn • TensorFlow • NLP • Evaluation</div>
-        <p>
-          Worked on ML/DL pipelines: preprocessing, model training, validation, and packaging models for real use cases.
-        </p>
-      </div>
-
-      <div class="muted small">
-        (Optional) If you want, we can auto-load your GitHub repos here as well.
       </div>
     </section>
 
-    <!-- Certificates (instead of Teaching) -->
+    <!-- Certificates -->
     <section id="certificates" class="section">
       <h2 class="section-title">Certificates</h2>
+
       <ul class="plain-list">
-        <li><strong>Certificate Name 1</strong> — Platform/Institute — Year</li>
-        <li><strong>Certificate Name 2</strong> — Platform/Institute — Year</li>
-        <li><strong>Certificate Name 3</strong> — Platform/Institute — Year</li>
+        <li>
+          <strong>4th Global National Hackathon – CallPilot</strong>
+          <div class="muted">22 Feb 2026</div>
+        </li>
+
+        <li>
+          <strong>Data Science: Machine Learning Training</strong>
+          <div class="muted">Knowledge Streams | Jul – Sep 2024</div>
+        </li>
+
+        <li>
+          <strong>Project Management Internship</strong>
+          <div class="muted">TechieMinions | Oct 2024</div>
+        </li>
+
+        <li>
+          <strong>Android App Development</strong>
+          <div class="muted">Dev Valley Software House | Aug 2022</div>
+        </li>
       </ul>
-      <p class="muted small">Replace the placeholders above with your real certificates.</p>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section contact">
       <h2 class="section-title">Contact</h2>
+
       <div class="contact-grid">
         <div class="contact-row">
           <div class="icon">✉️</div>
           <div><a id="lnk-email" href="#">hadiaj2002@gmail.com</a></div>
         </div>
+
         <div class="contact-row">
           <div class="icon">📞</div>
           <div class="muted">+92 3094177014</div>
         </div>
+
         <div class="contact-row">
           <div class="icon">🔗</div>
           <div>
-            <a id="lnk-github2" href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <span class="muted"> • </span>
-            <a id="lnk-linkedin2" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a id="lnk-github2" href="#" target="_blank">GitHub</a> •
+            <a id="lnk-linkedin2" href="#" target="_blank">LinkedIn</a>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">© <span id="year"></span> Hadia Mubashar</footer>
+    <footer class="footer">
+      © <span id="year"></span> Hadia Mubashar
+    </footer>
+
   </main>
 
   <script src="./assets/config.js"></script>
   <script src="./assets/app.js"></script>
+
 </body>
 </html>
