@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Hadia Mubashar</title>
+  <meta name="description" content="Projects and case studies in automation, AI agents, RAG, and ML/DL." />
+  <link rel="icon" href="./assets/favicon.svg" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./">Hadia Mubashar</a>
+      <nav class="nav">
+        <a href="./">Home</a>
+        <a href="./blog.html">Blog</a>
+        <a class="active" href="./projects.html">Projects</a>
+        <a href="./about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1 class="page-title">Projects</h1>
+    <p class="lead">Selected work — explained as outcomes and systems, not just bullet points.</p>
+
+    <section class="case card" id="recruitment">
+      <h2>Recruitment Automation System</h2>
+      <p class="meta">Make.com • Gmail API • Google Sheets • Scraping/Enrichment</p>
+      <p>
+        Built an automation pipeline that parses resumes, matches candidates, finds contact details,
+        drafts outreach emails, and routes approvals through a simple human review step.
+      </p>
+      <ul class="list">
+        <li>Reduced manual work by ~80%</li>
+        <li>Improved contact relevancy to ~90% (reported)</li>
+        <li>Designed for transparency + approvals (human-in-the-loop)</li>
+      </ul>
+    </section>
+
+    <section class="case card" id="rag">
+      <h2>Knowledge Retrieval Engine (RAG)</h2>
+      <p class="meta">LLMs • Embeddings • Vector Search (FAISS/Vector DB) • Evaluation</p>
+      <p>
+        Built a semantic retrieval system that indexes documents into a vector store and uses an LLM
+        to answer questions with grounded context. Focused on retrieval quality and response accuracy.
+      </p>
+      <ul class="list">
+        <li>Embedding + chunking strategy for better recall</li>
+        <li>Metadata filters + similarity search for relevant context</li>
+        <li>Context injection for summarization + QA</li>
+        <li>Quality checks to reduce hallucinations</li>
+      </ul>
+    </section>
+
+    <section class="case card" id="agents">
+      <h2>AI Social Media Automation Agent</h2>
+      <p class="meta">n8n • Agents • Scheduling • CRM sync</p>
+      <p>
+        Built an agent workflow that generates ideas, writes captions, creates image prompts,
+        schedules posts, publishes automatically, and syncs engagement signals to CRM.
+      </p>
+      <ul class="list">
+        <li>End-to-end pipeline from ideation to publishing</li>
+        <li>Automation triggers based on engagement signals</li>
+        <li>Designed for consistent posting and performance tracking</li>
+      </ul>
+    </section>
+
+    <section class="case card" id="ml">
+      <h2>Machine Learning & Deep Learning Work</h2>
+      <p class="meta">Python • scikit-learn • TensorFlow • NLP • Model Evaluation</p>
+      <p>
+        Worked on ML/DL pipelines for real use-cases: data preprocessing, feature engineering,
+        model training, validation, and deployment-ready packaging.
+      </p>
+      <ul class="list">
+        <li>Built supervised models and evaluation pipelines</li>
+        <li>Experimented with deep learning architectures for NLP/classification</li>
+        <li>Created reusable training + inference workflows</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>GitHub repositories</h2>
+      <p class="muted">Auto-loaded from your GitHub profile.</p>
+      <div id="repoStatus" class="muted"></div>
+      <div id="repoList" class="repo-list"></div>
+    </section>
+
+    <footer class="footer">© <span id="year"></span> Hadia Mubashar</footer>
+  </main>
+
+  <script src="./assets/config.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
