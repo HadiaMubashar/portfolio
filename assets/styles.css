@@ -7,7 +7,12 @@
 }
 
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto; line-height:1.6}
+html,body{
+  margin:0;padding:0;
+  background:var(--bg);color:var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+  line-height:1.6
+}
 a{color:var(--brand);text-decoration:none}
 a:hover{text-decoration:underline}
 
@@ -17,23 +22,26 @@ a:hover{text-decoration:underline}
 .topbar{position:sticky;top:0;z-index:10;background:var(--brand);color:#fff}
 .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:58px}
 .brand{font-weight:800;letter-spacing:.6px}
-.nav a{color:#fff;margin-left:16px;opacity:.95}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:2px}
+.nav a{color:#fff;margin-left:16px;opacity:.95;white-space:nowrap}
 .nav a:hover{opacity:1;text-decoration:none}
 
-/* Hero layout (like the example) */
+/* Hero layout */
 .hero{
   display:grid;
   grid-template-columns:320px 1fr;
   gap:40px;
   padding:42px 0 24px;
 }
-
 @media (max-width: 900px){
-  .hero{grid-template-columns:1fr;gap:22px}
+  .hero{grid-template-columns:1fr;gap:22px;padding-top:26px}
 }
 
 .left{padding-top:10px}
-.photo-wrap{width:220px;height:220px;border-radius:999px;overflow:hidden;margin:0 auto 18px;border:1px solid var(--line);background:#f3f4f6}
+.photo-wrap{
+  width:220px;height:220px;border-radius:999px;overflow:hidden;
+  margin:0 auto 18px;border:1px solid var(--line);background:#f3f4f6
+}
 .photo{width:100%;height:100%;object-fit:cover;display:block}
 .photo-fallback{
   width:100%;height:100%;
@@ -56,14 +64,8 @@ a:hover{text-decoration:underline}
 .contact-mini span:first-child{color:var(--muted)}
 
 .right{padding-top:8px}
-.lead{
-  font-size:18px;
-  margin:0 0 14px;
-}
-.current{
-  margin:18px 0 0;
-  font-size:18px;
-}
+.lead{font-size:18px;margin:0 0 14px}
+.current{margin:18px 0 0;font-size:18px}
 
 /* Two-column blocks under description */
 .two-col{
@@ -75,7 +77,6 @@ a:hover{text-decoration:underline}
 @media (max-width: 900px){
   .two-col{grid-template-columns:1fr}
 }
-
 .block h2{margin:0 0 10px;font-size:24px}
 .edu-title{font-weight:800}
 .muted{color:var(--muted)}
@@ -83,19 +84,37 @@ a:hover{text-decoration:underline}
 
 /* Chips */
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:13px;background:#fafafa}
+.chip{
+  border:1px solid var(--line);
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:13px;
+  background:#fafafa
+}
 
 /* Sections */
 .section{padding:40px 0;border-top:1px solid var(--line)}
 .section-title{font-size:42px;font-weight:400;margin:0 0 18px;color:#1f2937}
 
-/* Projects list like “Papers” */
+/* Research Section */
+.research-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+@media (max-width:900px){
+  .research-grid{grid-template-columns:1fr}
+}
+.research-item h3{margin:0 0 6px;font-size:20px}
+.research-item p{margin:0;color:var(--muted);max-width:70ch}
+
+/* Projects list style */
 .project{padding:14px 0}
 .project h3{margin:0 0 6px;font-size:20px}
 .meta{color:var(--muted);font-size:13px;margin-bottom:6px}
 .project p{margin:0;max-width:85ch}
 
-.plain-list{margin:0;padding-left:18px}
+.plain-list{margin:10px 0 0;padding-left:18px}
 .plain-list li{margin:10px 0}
 
 /* Contact */
