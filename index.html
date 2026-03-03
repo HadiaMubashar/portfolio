@@ -3,127 +3,186 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hadia Mubashar — Automation & AI</title>
-  <meta name="description" content="I build automation systems and AI solutions (LLMs, RAG, ML/DL) that save teams time and scale operations." />
+  <title>Hadia Mubashar — AI & Automation Developer</title>
+  <meta name="description" content="AI & Automation Developer — LLMs, RAG, Vector Search, ML/DL, Integrations and Workflow Automation." />
   <link rel="icon" href="./assets/favicon.svg" />
   <link rel="stylesheet" href="./assets/styles.css" />
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="./">Hadia Mubashar</a>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">HADIA MUBASHAR</div>
       <nav class="nav">
-        <a class="active" href="./">Home</a>
-        <a href="./blog.html">Blog</a>
-        <a href="./projects.html">Projects</a>
-        <a href="./about.html">About</a>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container page">
+  <main id="home" class="container">
     <section class="hero">
-      <p class="kicker">Automation • AI Agents • Machine Learning • RAG • Vector Search</p>
+      <!-- Left column -->
+      <aside class="left">
+        <div class="photo-wrap">
+          <!-- ✅ Add your image in assets/profile.jpg -->
+          <img class="photo" src="./assets/profile.jpg" alt="Hadia Mubashar" onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='grid';" />
+          <div id="photoFallback" class="photo-fallback">HM</div>
+        </div>
 
-      <h1>I build automation systems and AI solutions that help teams move faster.</h1>
+        <h1 class="name">Hadia Mubashar</h1>
+        <div class="role">AI & Automation Developer</div>
 
-      <p class="lead">
-        I work at the intersection of <strong>workflow automation</strong> and <strong>applied AI</strong>:
-        integrating tools (n8n/Make/APIs) and building AI components (LLMs, RAG, vector databases, ML/DL)
-        to reduce manual work and improve decision-making.
-      </p>
+        <div class="contact-mini">
+          <div><span>Email</span> <a id="emailText" href="#">hadiaj2002@gmail.com</a></div>
+          <div><span>Phone</span> <span class="muted">+92 3094177014</span></div>
+          <div><span>GitHub</span> <a id="lnk-github" href="#" target="_blank" rel="noreferrer">HadiaMubashar</a></div>
+          <div><span>LinkedIn</span> <a id="lnk-linkedin" href="#" target="_blank" rel="noreferrer">Profile</a></div>
+        </div>
+      </aside>
 
-      <div class="hero-cta">
-        <a class="btn" href="./projects.html">See my work</a>
-        <a class="btn ghost" href="./blog.html">Read my blog</a>
-      </div>
-
-      <div class="mini-links">
-        <a id="lnk-email" href="#">Email</a>
-        <a id="lnk-github" href="#" target="_blank" rel="noreferrer">GitHub</a>
-        <a id="lnk-linkedin" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-      </div>
-    </section>
-
-    <section class="grid-2">
-      <article class="card">
-        <h2>What I do</h2>
-        <ul class="list">
-          <li><strong>Automation systems</strong> — n8n, Make.com, Zapier, webhooks, approvals, monitoring</li>
-          <li><strong>AI agents</strong> — tool-using agents, workflow copilots, action-triggering assistants</li>
-          <li><strong>RAG & vector search</strong> — embeddings, chunking, FAISS/vector DBs, retrieval + quality checks</li>
-          <li><strong>ML/DL</strong> — scikit-learn, TensorFlow, training + evaluation pipelines</li>
-          <li><strong>LLM apps</strong> — prompting, function calling, guardrails, reliability</li>
-          <li><strong>Data pipelines</strong> — scraping, parsing, enrichment, QA, storage</li>
-        </ul>
-
-        <p class="muted" style="margin-top:10px">
-          <strong>AI stack:</strong> LLMs, prompt engineering, function calling, LangChain, embeddings, FAISS/vector DBs, RAG pipelines.
+      <!-- Right column -->
+      <section class="right">
+        <p class="lead">
+          I am an <strong>AI & Automation Developer</strong> focused on building production-grade systems that reduce manual work,
+          improve decision-making, and connect tools through robust integrations.
         </p>
-      </article>
 
-      <article class="card">
-        <h2>What I’m building lately</h2>
-        <p class="muted">
-          Lately I’ve been building systems that combine <strong>automation + LLMs</strong>:
-          lead/recruitment workflows, internal knowledge assistants (RAG),
-          and agent pipelines that take actions across tools safely (human-in-the-loop).
+        <p class="lead">
+          My core interests include <strong>LLMs</strong>, <strong>RAG</strong>, <strong>vector databases</strong>, <strong>machine learning</strong>,
+          <strong>deep learning</strong>, and <strong>AI agents</strong> — combined with workflow automation using <strong>n8n</strong>, <strong>Make.com</strong>,
+          and custom APIs.
         </p>
-        <p class="muted">
-          I care about reliability: logging, retries, fallbacks, and clear evaluation—so solutions work in production, not just demos.
+
+        <p class="lead">
+          I’ve worked with technologies like <strong>LangChain</strong>, <strong>FAISS / Vector DBs</strong>, embeddings, retrieval pipelines,
+          and evaluation techniques to improve answer quality and reduce hallucinations.
+          I also build automation pipelines end-to-end: data ingestion → processing → AI reasoning → action execution.
         </p>
-      </article>
+
+        <p class="lead">
+          I have led and contributed to teams delivering automation and AI solutions for real business workflows — with reliability practices like
+          logging, retries, approvals (human-in-the-loop), and maintainable architecture.
+        </p>
+
+        <p class="current">
+          I am currently working as <strong>Automation Expert</strong> at <strong>TechForce247</strong> (Remote).
+        </p>
+
+        <section class="two-col">
+          <div class="block">
+            <h2>Education</h2>
+            <div class="edu">
+              <div class="edu-title">BS in Information Technology</div>
+              <div class="muted">Government College University Faisalabad (2019–2023)</div>
+              <div class="muted">GPA: 3.24</div>
+            </div>
+          </div>
+
+          <div class="block">
+            <h2>Technologies</h2>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">n8n</span>
+              <span class="chip">Make.com</span>
+              <span class="chip">FastAPI</span>
+              <span class="chip">LLMs</span>
+              <span class="chip">LangChain</span>
+              <span class="chip">RAG</span>
+              <span class="chip">Embeddings</span>
+              <span class="chip">FAISS</span>
+              <span class="chip">Vector DBs</span>
+              <span class="chip">scikit-learn</span>
+              <span class="chip">TensorFlow</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Docker</span>
+            </div>
+          </div>
+        </section>
+      </section>
     </section>
 
-    <section class="section">
-      <div class="section-head">
-        <h2>Latest posts</h2>
-        <a class="muted" href="./blog.html">All posts →</a>
+    <!-- Projects (instead of Papers) -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project">
+        <h3>Recruitment Automation System</h3>
+        <div class="meta">Make.com • Gmail API • Google Sheets • Scraping/Enrichment</div>
+        <p>
+          Automated resume parsing, candidate matching, contact finding, and outreach with approvals via Sheets toggles.
+          Designed human review steps for quality and control.
+        </p>
       </div>
-      <div class="posts" id="latestPosts"></div>
-    </section>
 
-    <section class="section">
-      <div class="section-head">
-        <h2>Featured case studies</h2>
-        <a class="muted" href="./projects.html">All projects →</a>
+      <div class="project">
+        <h3>Knowledge Retrieval Engine (RAG)</h3>
+        <div class="meta">LLMs • LangChain • Embeddings • FAISS / Vector Search</div>
+        <p>
+          Built a semantic retrieval system with vector indexing and grounded responses using retrieved context.
+          Focused on retrieval quality, chunking, and response evaluation.
+        </p>
       </div>
 
-      <div class="posts">
-        <a class="post" href="./projects.html#recruitment">
-          <h3>Recruitment Automation System</h3>
-          <p>Resume parsing → matching → outreach → approvals (human-in-the-loop).</p>
-          <span class="meta">Make.com • Gmail API • Sheets</span>
-        </a>
+      <div class="project">
+        <h3>AI Social Media Automation Agent</h3>
+        <div class="meta">n8n • Agents • Scheduling • CRM Sync</div>
+        <p>
+          End-to-end automation for ideation → captions → image prompts → scheduling → publishing across platforms,
+          plus CRM sync and follow-up triggers based on engagement.
+        </p>
+      </div>
 
-        <a class="post" href="./projects.html#rag">
-          <h3>Knowledge Retrieval Engine (RAG)</h3>
-          <p>Embeddings + vector search with grounded answers and quality checks.</p>
-          <span class="meta">LLMs • FAISS/Vector DB • LangChain</span>
-        </a>
+      <div class="project">
+        <h3>Machine Learning / Deep Learning Work</h3>
+        <div class="meta">Python • scikit-learn • TensorFlow • NLP • Evaluation</div>
+        <p>
+          Worked on ML/DL pipelines: preprocessing, model training, validation, and packaging models for real use cases.
+        </p>
+      </div>
 
-        <a class="post" href="./projects.html#agents">
-          <h3>AI Agents for Social Automation</h3>
-          <p>Content pipeline + scheduling + publishing + CRM sync.</p>
-          <span class="meta">n8n • Agents • Automations</span>
-        </a>
+      <div class="muted small">
+        (Optional) If you want, we can auto-load your GitHub repos here as well.
       </div>
     </section>
 
-    <section id="contact" class="section card">
-      <h2>Contact</h2>
-      <p class="muted">Want to collaborate or hire me? Send a message.</p>
-      <p>
-        <strong>Email:</strong> <a id="emailText" href="#">hadiaj2002@gmail.com</a><br/>
-        <strong>Phone:</strong> +92 3094177014
-      </p>
+    <!-- Certificates (instead of Teaching) -->
+    <section id="certificates" class="section">
+      <h2 class="section-title">Certificates</h2>
+      <ul class="plain-list">
+        <li><strong>Certificate Name 1</strong> — Platform/Institute — Year</li>
+        <li><strong>Certificate Name 2</strong> — Platform/Institute — Year</li>
+        <li><strong>Certificate Name 3</strong> — Platform/Institute — Year</li>
+      </ul>
+      <p class="muted small">Replace the placeholders above with your real certificates.</p>
     </section>
 
-    <footer class="footer">
-      © <span id="year"></span> Hadia Mubashar
-    </footer>
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-row">
+          <div class="icon">✉️</div>
+          <div><a id="lnk-email" href="#">hadiaj2002@gmail.com</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="icon">📞</div>
+          <div class="muted">+92 3094177014</div>
+        </div>
+        <div class="contact-row">
+          <div class="icon">🔗</div>
+          <div>
+            <a id="lnk-github2" href="#" target="_blank" rel="noreferrer">GitHub</a>
+            <span class="muted"> • </span>
+            <a id="lnk-linkedin2" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">© <span id="year"></span> Hadia Mubashar</footer>
   </main>
 
   <script src="./assets/config.js"></script>
