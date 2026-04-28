@@ -3,319 +3,880 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hadia Mubashar — AI & Automation Developer</title>
-  <meta name="description" content="AI & Automation Developer | Machine Learning | Deep Learning | LLMs | RAG | Vector Databases | Geospatial Data | Forecasting" />
-  <link rel="icon" href="./assets/favicon.svg" />
-  <link rel="stylesheet" href="./assets/styles.css" />
+  <title>Hadia Mubashar — AI Automation Engineer</title>
+  <meta name="description" content="Hadia Mubashar — AI Automation Engineer helping businesses grow with AI automation, n8n, Make.com, AI agents, RAG, data science, and machine learning." />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --soft: #f8fafc;
+      --line: #e2e8f0;
+      --accent: #1d4ed8;
+      --accent-soft: #eff6ff;
+      --card: #ffffff;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      font-size: 14px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav a { color: var(--muted); }
+    .nav a:hover { color: var(--text); text-decoration: none; }
+
+    .hero {
+      padding: 88px 0 70px;
+      background:
+        radial-gradient(circle at top left, rgba(29,78,216,0.08), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 7px 12px;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 76px);
+      line-height: 0.98;
+      margin: 0 0 18px;
+      letter-spacing: -0.055em;
+    }
+
+    .subtitle {
+      font-size: clamp(20px, 2.2vw, 26px);
+      color: #1f2937;
+      max-width: 780px;
+      margin: 0 0 16px;
+      font-weight: 650;
+      line-height: 1.35;
+    }
+
+    .hero-copy {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-weight: 850;
+      border: 1px solid var(--line);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--text);
+      color: #fff;
+      border-color: var(--text);
+      box-shadow: 0 14px 30px rgba(17,24,39,.18);
+    }
+
+    .btn-primary:hover { color: #fff; }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--text);
+    }
+
+    .profile-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .profile-photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #eff6ff, #ffffff);
+      border: 1px solid #bfdbfe;
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      font-size: 34px;
+      font-weight: 950;
+      margin-bottom: 18px;
+      overflow: hidden;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .mini-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .mini-row span:first-child {
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .mini-row:last-child { border-bottom: 0; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .stat {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 22px;
+      letter-spacing: -0.03em;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 76px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 42px);
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+    }
+
+    .section-note {
+      margin: 8px 0 0;
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 10px 28px rgba(15,23,42,.04);
+    }
+
+    .card h2, .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .meta {
+      color: var(--accent);
+      font-weight: 850;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .muted { color: var(--muted); }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .case-card {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .result-badge {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      padding: 7px 10px;
+      background: var(--accent-soft);
+      border: 1px solid #bfdbfe;
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      margin: 10px 0 12px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .experience-card {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .experience-card::before {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 0;
+      width: 4px;
+      height: 44px;
+      background: var(--accent);
+      border-radius: 999px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      color: #374151;
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .repo-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .repo-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      min-height: 180px;
+    }
+
+    .repo-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .repo-card p {
+      color: var(--muted);
+      margin: 0 0 14px;
+      font-size: 14px;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      border-radius: 26px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-box .muted { color: #cbd5e1; }
+    .contact-box a { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+
+    .footer {
+      padding: 30px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .case-grid-large {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .case-card {
+      border-radius: 22px;
+      padding: 34px;
+      min-height: 100%;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+    }
+
+    .case-card h3 {
+      font-size: 22px;
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .case-card .meta {
+      font-size: 15px;
+      line-height: 1.55;
+      margin-bottom: 22px;
+      color: var(--accent);
+    }
+
+    .case-card p,
+    .case-card li {
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    .result-badge {
+      margin: 0 0 24px;
+      font-size: 14px;
+      padding: 9px 14px;
+      border-color: #bfdbfe;
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .case-card ul {
+      margin-top: 18px;
+    }
+
+    @media (max-width: 1000px) {
+      .case-grid-large {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    @media (max-width: 900px) {
+      .hero-grid, .grid-2, .grid-3, .repo-list, .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 0;
+      }
+
+      .hero { padding-top: 56px; }
+      .stats { grid-template-columns: 1fr; }
+      .section-header { display: block; }
+    }
+  </style>
 </head>
 
 <body>
-
-  <!-- Top Navigation -->
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">HADIA MUBASHAR</div>
       <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#research">Research Interests</a>
-        <a href="#projects">Projects</a>
-        <a href="#certificates">Certificates</a>
+        <a href="#about">About</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#experience">Experience</a>
+        <a href="#github">Add GitHub URL</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="home" class="container">
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">AI Automation • RAG • Geospatial Intelligence • Forecasting</div>
+        <h1>Hadia Mubashar</h1>
+        <p class="subtitle">
+          AI & Automation Developer helping businesses grow through intelligent workflows, applied AI systems, and data-driven automation.
+        </p>
+        <p class="hero-copy">
+          I build practical AI systems that combine workflow automation with machine learning, LLMs, RAG pipelines,
+          geospatial data engineering, and forecasting. My work focuses on reducing manual effort, improving decision-making,
+          and creating reliable automation systems with measurable business impact.
+        </p>
 
-    <!-- Hero Section -->
-    <section class="hero">
-
-      <!-- Left Column -->
-      <aside class="left">
-
-        <div class="photo-wrap">
-          <!-- Upload your image as assets/profile.png -->
-          <img class="photo"
-               src="./assets/profile.png"
-               alt="Hadia Mubashar"
-               onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='grid';" />
-          <div id="photoFallback" class="photo-fallback">HM</div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1uRWUPg40zoaAymgxY-5RMJ7O5rqc9kxr?usp=drive_link" target="_blank" rel="noreferrer">View My Portfolio</a>
+          <a class="btn btn-secondary" href="mailto:hadiaj2002@gmail.com">Work With Me</a>
+          <a class="btn btn-secondary" href="#case-studies">See Case Studies</a>
         </div>
 
-        <h1 class="name">Hadia Mubashar</h1>
-        <div class="role">AI & Automation Developer</div>
-
-        <div class="contact-mini">
-          <div><span>Email</span> <a id="emailText" href="#">hadiaj2002@gmail.com</a></div>
-          <div><span>Phone</span> <span class="muted">+92 3094177014</span></div>
-          <div><span>GitHub</span> <a id="lnk-github" href="#" target="_blank" rel="noreferrer">HadiaMubashar</a></div>
-          <div><span>LinkedIn</span> <a id="lnk-linkedin" href="#" target="_blank" rel="noreferrer">Profile</a></div>
+        <div class="stats">
+          <div class="stat"><strong>RAG</strong><span>retrieval systems</span></div>
+          <div class="stat"><strong>GeoAI</strong><span>spatial automation</span></div>
+          <div class="stat"><strong>ML</strong><span>forecasting models</span></div>
         </div>
+      </div>
 
+      <aside class="profile-card">
+        <div class="profile-photo">
+          <img src="./assets/profile.png" alt="Hadia Mubashar" onload="this.style.display='block'; this.parentElement.childNodes[0].textContent='';" />
+          HM
+        </div>
+        <h2 style="margin:0 0 6px;">Business-focused AI Automation</h2>
+        <p class="muted" style="margin:0;">
+          I build automation systems that help teams save time, improve operations, and create scalable growth.
+        </p>
+
+        <div class="mini-list">
+          <div class="mini-row"><span>Email</span><a href="mailto:hadiaj2002@gmail.com">hadiaj2002@gmail.com</a></div>
+          <div class="mini-row"><span>Phone</span><span>+92 3094177014</span></div>
+          <div class="mini-row"><span>LinkedIn</span><a href="https://www.linkedin.com/in/hadia-mubashar/" target="_blank" rel="noreferrer">LinkedIn</a></div>
+          <div class="mini-row"><span>GitHub</span><a href="https://github.com/HadiaMubashar" target="_blank" rel="noreferrer">GitHub</a></div>
+          <div class="mini-row"><span>Portfolio</span><a href="https://drive.google.com/drive/folders/1uRWUPg40zoaAymgxY-5RMJ7O5rqc9kxr?usp=drive_link" target="_blank" rel="noreferrer">Open Drive</a></div>
+        </div>
       </aside>
+    </div>
+  </section>
 
-      <!-- Right Column -->
-      <section class="right">
-
-        <p class="lead">
-          I am an <strong>AI & Automation Developer</strong> building intelligent systems that combine
-          workflow automation with applied artificial intelligence.
-        </p>
-
-        <p class="lead">
-          My work focuses on LLMs, RAG pipelines,
-          vector databases, machine learning, and
-          deep learning integrated into real-world automation systems.
-        </p>
-
-        <p class="lead">
-          I design end-to-end pipelines from data ingestion and preprocessing to AI reasoning
-          and action execution, ensuring reliability with logging, retries, and human-in-the-loop validations.
-        </p>
-
-        <p class="lead">
-          I’ve worked across geospatial automation, real-estate modeling, and forecasting systems,
-          and I enjoy building practical AI that creates measurable business impact.
-        </p>
-
-        <p class="current">
-          Currently working as <strong>Automation Expert</strong> at
-          <strong>TechForce247 </strong>.
-        </p>
-
-        <!-- Education + Technologies -->
-        <section class="two-col">
-
-          <div class="block">
-            <h2>Education</h2>
-            <div class="edu">
-              <div class="edu-title">BS in Information Technology</div>
-              <div class="muted">Government College University Faisalabad (2019–2023)</div>
-              <div class="muted">GPA: 3.24</div>
-            </div>
-          </div>
-
-          <div class="block">
-            <h2>Technologies</h2>
-            <div class="chips">
-              <span class="chip">Python</span>
-              <span class="chip">Machine Learning</span>
-              <span class="chip">Deep Learning</span>
-              <span class="chip">LLMs</span>
-              <span class="chip">RAG</span>
-              <span class="chip">Embeddings</span>
-              <span class="chip">FAISS</span>
-              <span class="chip">Vector DBs</span>
-              <span class="chip">LangChain</span>
-              <span class="chip">scikit-learn</span>
-              <span class="chip">TensorFlow</span>
-              <span class="chip">Time Series</span>
-              <span class="chip">ARIMA</span>
-              <span class="chip">LSTM</span>
-              <span class="chip">OpenStreetMap</span>
-              <span class="chip">Geocoding</span>
-              <span class="chip">n8n</span>
-              <span class="chip">Make.com</span>
-              <span class="chip">FastAPI</span>
-              <span class="chip">SQL</span>
-              <span class="chip">Docker</span>
-            </div>
-          </div>
-
-        </section>
-
-      </section>
-    </section>
-
-    <!-- Research Interests -->
-    <section id="research" class="section">
-      <h2 class="section-title">Research Interests</h2>
-
-      <div class="research-grid">
-
-        <div class="research-item">
-          <h3>Artificial Intelligence & LLM Systems</h3>
-          <p>
-            Applied large language models, prompt engineering, function calling,
-            evaluation strategies, and reliability practices for real-world applications.
+  <main>
+    <section class="section" id="about">
+      <div class="container grid-2">
+        <div>
+          <h2 class="section-title">I design AI automation systems that turn data and workflows into business value.</h2>
+          <p class="section-note">
+            My work spans LLM applications, retrieval-augmented generation, vector search, geospatial automation,
+            real-estate modeling, forecasting, recruitment automation, and AI content workflows. I focus on reliable,
+            end-to-end systems that combine automation, clean data pipelines, and human-in-the-loop controls.
           </p>
         </div>
 
-        <div class="research-item">
-          <h3>Retrieval-Augmented Generation (RAG)</h3>
-          <p>
-            Vector databases, embeddings, semantic retrieval, chunking strategies,
-            metadata filtering, and hallucination mitigation techniques.
-          </p>
+        <div class="card">
+          <h3>Education</h3>
+          <p><strong>BS in Information Technology</strong></p>
+          <p class="muted">Government College University Faisalabad • 2019–2023</p>
+          <p class="muted">GPA: 3.24</p>
+          <p class="muted">Relevant coursework: OOP, Data Structures, Software Engineering, Information Security, Communication.</p>
         </div>
-
-        <div class="research-item">
-          <h3>Machine Learning & Deep Learning</h3>
-          <p>
-            Model training and evaluation pipelines, supervised learning,
-            deep learning workflows, and practical deployment-ready systems.
-          </p>
-        </div>
-
-        <div class="research-item">
-          <h3>Time Series Forecasting</h3>
-          <p>
-            Forecasting pipelines using ARIMA and LSTM models, handling sparse data,
-            and ranking regions by reliability and growth potential.
-          </p>
-        </div>
-
-        <div class="research-item">
-          <h3>Geospatial Data Engineering</h3>
-          <p>
-            OpenStreetMap integration, geocoding pipelines, building-structure heuristics,
-            and automation for spatial insights.
-          </p>
-        </div>
-
-        <div class="research-item">
-          <h3>Data-Driven Real Estate Modeling</h3>
-          <p>
-            Street classification systems, inflation adjustments, premium-zone detection,
-            and structured reporting for investment insights.
-          </p>
-        </div>
-
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <h2 class="section-title">Projects</h2>
-
-      <div class="project">
-        <h3>Building Orientation Calculation Based on Address</h3>
-        <div class="meta">Geospatial Data Engineering & Mapping Automation • OpenStreetMap • Geocoding</div>
-        <p>
-          Developed a geospatial pipeline to automatically calculate a building’s orientation (North, East, South, West)
-          using OpenStreetMap data and geocoded addresses.
-        </p>
-        <ul class="plain-list">
-          <li>Addressed edge cases: missing entrance data, ambiguous geocoding, and complex building structures.</li>
-          <li>Designed filtering rules and fallback heuristics for consistent orientation estimation.</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h3>Prime Street Classification System</h3>
-        <div class="meta">Real Estate Data Analysis & Modeling • NLP • OpenAI Transformers</div>
-        <p>
-          Developed a scalable system to identify and classify prime streets with significantly higher €/m² values
-          than surrounding areas to improve valuation accuracy.
-        </p>
-        <ul class="plain-list">
-          <li>Built a pipeline to preprocess property listings and normalize street names using OpenAI transformers.</li>
-          <li>Adjusted prices for inflation using a custom Reflector object.</li>
-          <li>Generated structured reports summarizing premium levels, ad concentration, and market impact.</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h3>Analysis & Forecasting of Areas Trending</h3>
-        <div class="meta">Time Series Forecasting • ARIMA • LSTM</div>
-        <p>
-          Built and evaluated ARIMA and LSTM models to forecast property price trends at 3-month, 8-month,
-          and 1.5-year intervals.
-        </p>
-        <ul class="plain-list">
-          <li>Cleaned and interpolated weekly data using custom heuristics and time-aware imputation.</li>
-          <li>Ranked neighborhoods by projected growth and listing volume to gauge forecast reliability.</li>
-          <li>Identified undervalued areas with high return potential.</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h3>Knowledge Retrieval Engine (RAG)</h3>
-        <div class="meta">LLMs • LangChain • Embeddings • FAISS / Vector Search</div>
-        <p>
-          Built a semantic retrieval system using vector indexing and grounded LLM responses, focusing on retrieval quality and evaluation.
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>Recruitment Automation System</h3>
-        <div class="meta">Automation • Make.com • Gmail API • Google Sheets</div>
-        <p>
-          Automated resume parsing, matching, outreach, and approvals through a human-in-the-loop workflow for quality control.
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>AI Social Media Automation Agent</h3>
-        <div class="meta">AI Agents • n8n • Scheduling • CRM Sync</div>
-        <p>
-          Built an agent workflow that generates content ideas, writes captions, creates image prompts,
-          schedules posts, publishes automatically, and syncs engagement signals to CRM.
-        </p>
-      </div>
-    </section>
-
-    <!-- Certificates -->
-    <section id="certificates" class="section">
-      <h2 class="section-title">Certificates</h2>
-
-      <ul class="plain-list">
-        <li>
-          <strong>4th Global National Hackathon – CallPilot</strong>
-          <div class="muted">22 Feb 2026</div>
-        </li>
-
-        <li>
-          <strong>Data Science: Machine Learning Training</strong>
-          <div class="muted">Knowledge Streams | Jul – Sep 2024</div>
-        </li>
-
-        <li>
-          <strong>Project Management Internship</strong>
-          <div class="muted">TechieMinions | Oct 2024</div>
-        </li>
-
-        <li>
-          <strong>Android App Development</strong>
-          <div class="muted">Dev Valley Software House | Aug 2022</div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section contact">
-      <h2 class="section-title">Contact</h2>
-
-      <div class="contact-grid">
-        <div class="contact-row">
-          <div class="icon">✉️</div>
-          <div><a id="lnk-email" href="#">hadiaj2002@gmail.com</a></div>
-        </div>
-
-        <div class="contact-row">
-          <div class="icon">📞</div>
-          <div class="muted">+92 3094177014</div>
-        </div>
-
-        <div class="contact-row">
-          <div class="icon">🔗</div>
+    <section class="section" id="case-studies">
+      <div class="container">
+        <div class="section-header">
           <div>
-            <a id="lnk-github2" href="#" target="_blank" rel="noreferrer">GitHub</a>
-            <span class="muted"> • </span>
-            <a id="lnk-linkedin2" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            <h2 class="section-title">Case Studies</h2>
+            <p class="section-note">
+              Three selected case studies showing business impact, technical execution, and real automation outcomes.
+            </p>
+          </div>
+        </div>
+
+        
+        
+        
+        
+        <div class="case-grid-large">
+          <article class="card case-card">
+            <div>
+              <h3>Recruitment Automation System</h3>
+              <div class="meta">Make.com • Apify • Apollo.io • Google Sheets • Gmail API</div>
+              <div class="result-badge">~80% manual work reduction</div>
+              <p>
+                Built a fully automated recruitment workflow that parses resumes, finds matching jobs,
+                identifies decision-makers, and prepares outreach with human approval before sending.
+              </p>
+              <ul>
+                <li>Automated resume parsing, job matching, and decision-maker discovery.</li>
+                <li>Used Google Sheets toggles for review and approval before Gmail outreach.</li>
+                <li>Improved contact relevancy to around 90% while keeping quality control.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card case-card">
+            <div>
+              <h3>Knowledge Retrieval Engine (RAG)</h3>
+              <div class="meta">LangChain • FAISS • Hugging Face • Vector Search</div>
+              <div class="result-badge">Semantic search + grounded answers</div>
+              <p>
+                Developed a retrieval engine that processes large text sources, creates vector embeddings,
+                and answers user questions with relevant retrieved context.
+              </p>
+              <ul>
+                <li>Used FAISS embeddings for fast semantic retrieval.</li>
+                <li>Built summarization and contextual Q&A over large text databases.</li>
+                <li>Focused on accurate, grounded responses instead of generic AI output.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card case-card">
+            <div>
+              <h3>AI Social Media Automation Agent</h3>
+              <div class="meta">n8n • OpenAI • MidJourney • GoHighLevel CRM</div>
+              <div class="result-badge">Ideation to publishing</div>
+              <p>
+                Built an AI agent workflow that manages content ideation, caption writing, image prompt creation,
+                scheduling, publishing, and CRM engagement sync.
+              </p>
+              <ul>
+                <li>Generated brand-aligned captions and creative image prompts.</li>
+                <li>Automated scheduling and publishing across social platforms.</li>
+                <li>Synced engagement signals to CRM for automated follow-up workflows.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+
+
+
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Experience</h2>
+            <p class="section-note">Hands-on roles across automation engineering, AI systems, and ML/AI development.</p>
+          </div>
+        </div>
+
+        <div class="timeline">
+
+          <article class="card experience-card">
+            <h3>Automation Expert — TechForce247</h3>
+            <div class="meta">Chicago, USA / Remote • Sep 2025 – Present</div>
+            <ul>
+              <li>Design and implement end-to-end automation solutions using n8n, Make.com, custom APIs, and low/no-code platforms.</li>
+              <li>Analyze internal requirements and architect scalable, efficient automation workflows.</li>
+              <li>Build API integrations and intelligent automation modules using prompt engineering and hybrid code/no-code approaches.</li>
+            </ul>
+          </article>
+
+          <article class="card experience-card">
+            <h3>Lead – AI & Automation — Techionik</h3>
+            <div class="meta">Lahore, Punjab / Onsite • Feb 2025 – Sep 2025</div>
+            <ul>
+              <li>Built end-to-end automation systems using n8n, Make.com, and Zapier.</li>
+              <li>Created pipelines for scraping, form parsing, CRM syncing, lead tagging, email/SMS delivery, and social media publishing.</li>
+              <li>Reduced manual effort by over 80% through reusable templates, reporting pipelines, and onboarding automations.</li>
+            </ul>
+          </article>
+
+          <article class="card experience-card">
+            <h3>Data Scientist — Techionik</h3>
+            <div class="meta">Lahore, Punjab / Onsite • Nov 2023 – Feb 2025</div>
+            <ul>
+              <li>Developed classification and segmentation models for complex problem statements.</li>
+              <li>Conducted data analysis to extract insights, optimize model performance, and support decision-making.</li>
+              <li>Built RAG chatbots with vector databases for efficient retrieval and embedding-based search.</li>
+            </ul>
+          </article>
+
+          <article class="card experience-card">
+            <h3>Data Scientist — Dev Valley Software House</h3>
+            <div class="meta">Gujranwala, Punjab / Onsite • Nov 2021 – Apr 2023</div>
+            <ul>
+              <li>Provided insights from large datasets to support business improvements.</li>
+              <li>Built predictive models with 90% accuracy to support strategic decision-making.</li>
+              <li>Conducted market research and collaborated with cross-functional teams to define project scopes.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="github">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">GitHub Projects</h2>
+            <p class="section-note">
+              This section can auto-load public repositories after you add your GitHub username in the script at the bottom.
+            </p>
+          </div>
+        </div>
+
+        <div id="repoStatus" class="muted" style="margin-bottom:16px;">Add your GitHub username in the file to enable auto-loading.</div>
+        <div id="repoList" class="repo-list">
+          <article class="repo-card">
+            <h3>AI Automation Workflows</h3>
+            <p>Showcase n8n, Make.com, and API workflows that solve business operations problems.</p>
+            <span class="chip">Automation</span>
+          </article>
+          <article class="repo-card">
+            <h3>RAG Chatbot Systems</h3>
+            <p>Projects using embeddings, vector databases, retrieval, and grounded AI responses.</p>
+            <span class="chip">RAG</span>
+          </article>
+          <article class="repo-card">
+            <h3>ML/AI Experiments</h3>
+            <p>Machine learning, classification, segmentation, and model evaluation projects.</p>
+            <span class="chip">Machine Learning</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Skills</h2>
+            <p class="section-note">Tools and technologies I use to build AI-powered automation systems.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">Java</span>
+            <span class="chip">n8n</span>
+            <span class="chip">Make.com</span>
+            <span class="chip">Zapier</span>
+            <span class="chip">AI Agents</span>
+            <span class="chip">Prompt Engineering</span>
+            <span class="chip">RAG</span>
+            <span class="chip">OpenAI GPT-4 / GPT-4o</span>
+            <span class="chip">LangChain</span>
+            <span class="chip">Hugging Face</span>
+            <span class="chip">Vector Databases</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Firebase</span>
+            <span class="chip">Supabase</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">NumPy</span>
+            <span class="chip">Matplotlib</span>
+            <span class="chip">Seaborn</span>
+            <span class="chip">Plotly</span>
+            <span class="chip">Scikit-learn</span>
+            <span class="chip">TensorFlow</span>
+            <span class="chip">BeautifulSoup</span>
+            <span class="chip">OpenCV</span>
+            <span class="chip">YOLOv8</span>
+            <span class="chip">Streamlit</span>
+            <span class="chip">Jupyter Notebook</span>
+            <span class="chip">Google Colab</span>
+            <span class="chip">VS Code</span>
+            <span class="chip">Droplet</span>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      © <span id="year"></span> Hadia Mubashar
-    </footer>
+    <section class="section" id="certificates">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Training & Certificates</h2>
+          </div>
+        </div>
 
+        <div class="grid-2">
+
+          <article class="card">
+            <h3>4th Global National Hackathon — CallPilot</h3>
+            <p class="muted">22 Feb 2026</p>
+          </article>
+          <article class="card">
+            <h3>Data Science: Machine Learning Training</h3>
+            <p class="muted">Knowledge Streams • Jul – Sep 2024</p>
+          </article>
+          <article class="card">
+            <h3>Project Management Internship</h3>
+            <p class="muted">TechieMinions • Oct 2024</p>
+          </article>
+          <article class="card">
+            <h3>Android App Development</h3>
+            <p class="muted">Dev Valley Software House • Aug 2022</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <h2 style="margin:0 0 8px;">Ready to automate your business workflows?</h2>
+            <p class="muted" style="margin:0;">
+              I can help with AI automation, workflow optimization, lead generation systems, chatbots, RAG, and business process automation.
+            </p>
+          </div>
+          <div>
+            <p style="margin:0 0 8px;"><a href="mailto:hadiaj2002@gmail.com">hadiaj2002@gmail.com</a></p>
+            <p style="margin:0 0 8px;">+92 3094177014</p>
+            <p style="margin:0 0 8px;"><a href="https://drive.google.com/drive/folders/1uRWUPg40zoaAymgxY-5RMJ7O5rqc9kxr?usp=drive_link" target="_blank" rel="noreferrer">View Portfolio</a></p>
+            <p style="margin:0;"><a href="https://www.linkedin.com/in/hadia-mubashar/" target="_blank" rel="noreferrer">LinkedIn</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="./assets/config.js"></script>
-  <script src="./assets/app.js"></script>
+  <footer class="footer">
+    © 2026 Hadia Mubashar. All rights reserved.
+  </footer>
 
+  <script>
+    /*
+      To enable GitHub auto-load:
+      1. Replace the empty value below with your GitHub username.
+      Example: const GITHUB_USHMNAME = "hadia-riaz";
+    */
+    const GITHUB_USHMNAME = "ishayy";
+
+    const repoStatus = document.getElementById("repoStatus");
+    const repoList = document.getElementById("repoList");
+
+    async function loadRepos() {
+      if (!GITHUB_USHMNAME) return;
+
+      try {
+        repoStatus.textContent = "Loading public GitHub repositories...";
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USHMNAME}/repos?sort=updated&per_page=6`);
+
+        if (!response.ok) {
+          repoStatus.textContent = "Could not load GitHub repositories. Please check the username.";
+          return;
+        }
+
+        const repos = await response.json();
+        const usefulRepos = repos.filter(repo => !repo.fork).slice(0, 6);
+
+        if (!usefulRepos.length) {
+          repoStatus.textContent = "No public repositories found yet.";
+          return;
+        }
+
+        repoStatus.textContent = "Latest public repositories from GitHub.";
+        repoList.innerHTML = usefulRepos.map(repo => `
+          <article class="repo-card">
+            <h3><a href="${repo.html_url}" target="_blank" rel="noreferrer">${repo.name}</a></h3>
+            <p>${repo.description || "Public GitHub project by Hadia Mubashar."}</p>
+            <span class="chip">${repo.language || "Project"}</span>
+          </article>
+        `).join("");
+      } catch (error) {
+        repoStatus.textContent = "GitHub repositories could not be loaded right now.";
+      }
+    }
+
+    loadRepos();
+  </script>
 </body>
 </html>
